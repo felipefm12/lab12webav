@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <li *ngFor="let user of users" class="list-group-item">
+    {{ user.id }} - {{ user.name }}
+    <button (click)="showUserDetails(user.id)" class="btn btn-link">Detalles</button>
+  </li>
+</ul>
+
+<app-user-details [userId]="selectedUserId"></app-user-details>
